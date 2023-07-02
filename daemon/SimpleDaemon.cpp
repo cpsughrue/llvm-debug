@@ -43,9 +43,6 @@ int main() {
     // Handle signals
     signal(SIGTERM, handle_signal);
 
-    // Daemon-specific initialization goes here
-    // Here we just sleep for 20 seconds
-
     // Open log file in append mode.
     freopen("daemon.log", "a", stdout);
     freopen("daemon.log", "a", stderr);
