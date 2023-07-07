@@ -1,1 +1,0 @@
-g++ Server.cpp -o Server

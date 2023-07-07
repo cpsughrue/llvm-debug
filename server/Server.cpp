@@ -41,7 +41,6 @@ int Server() {
     }
 
     while (true) {
-
         // receive incoming connection
         // creates new socket
         // does not impact listening socket
@@ -60,7 +59,7 @@ int Server() {
             if (n < 0) perror("read error");
             else fprintf(stderr, "EOF\n");
         } else {
-            printf("Received: %s\n", buf);
+            printf("Received: \"%s\"\n", buf);
             fflush(stdout);
         }
         close(client);
@@ -69,7 +68,7 @@ int Server() {
 }
 
 void handle_signal(int signal) {
-    std::cout << "Received signal " << signal << ", terminating...\n";
+    std::cout << "Received signal " << signal << ", terminating..." << std::endl;
     exit(0);
 }
 
