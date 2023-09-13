@@ -1,6 +1,6 @@
 COMPILER=~/repos/llvm-project-fork/build/bin/clang++
 
-$COMPILER -fmodule-build-daemon main.cpp
+$COMPILER main.cpp 
 
 FILE="a.out"
 if [[ -f $FILE ]]; then
