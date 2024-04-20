@@ -1,4 +1,4 @@
-# kill running daemon process if exists
+# kill all running daemon process if exists
 PID=$(ps -aux | grep cc1 | grep -v grep | awk '{print $2}')
 if [[ -n $PID ]]; then
     kill $PID
